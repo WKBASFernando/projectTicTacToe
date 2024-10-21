@@ -10,12 +10,12 @@ import javafx.scene.control.DialogEvent;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 
-public class LayoutController implements BoardUI {
+public class BoardController implements BoardUI {
     BoardImpl board;
     AiPlayer ai;
     HumanPlayer human;
 
-    public LayoutController() {
+    public BoardController() {
         board = new BoardImpl();
         ai = new AiPlayer(board);
         human = new HumanPlayer(board);

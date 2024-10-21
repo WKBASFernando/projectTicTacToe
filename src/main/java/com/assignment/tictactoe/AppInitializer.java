@@ -11,7 +11,7 @@ import java.io.IOException;
 public class AppInitializer extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/view/Layout.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/view/BoardView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Tic Tac Toe");
         Image image = new Image(getClass().getResourceAsStream("/images/39a931202530759.Y3JvcCw3NDksNTg2LDIwMCw0MzQ.png"));
