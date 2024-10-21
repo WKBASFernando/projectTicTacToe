@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe.service;
+package com.assignment.tictactoe.service;
 
 public abstract class Player {
 

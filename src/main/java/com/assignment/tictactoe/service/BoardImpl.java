@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe.service;
+package com.assignment.tictactoe.service;
 
 public class BoardImpl implements Board {
     private Piece[][] pieces = new Piece[3][3];

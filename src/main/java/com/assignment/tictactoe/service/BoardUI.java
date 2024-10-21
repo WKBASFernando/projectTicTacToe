@@ -1,4 +1,4 @@
-package com.tictactoe.tictactoe.service;
+package com.assignment.tictactoe.service;
 
 public interface BoardUI {
     void update(int row, int col, Piece piece);
