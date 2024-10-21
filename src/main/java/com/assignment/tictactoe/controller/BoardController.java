@@ -14,6 +14,7 @@ public class BoardController implements BoardUI {
     BoardImpl board;
     AiPlayer ai;
     HumanPlayer human;
+    private Button[][] buttons = new Button[3][3];
 
     public BoardController() {
         board = new BoardImpl();
@@ -80,20 +81,28 @@ public class BoardController implements BoardUI {
         }
     }
 
+    public void initialize() {
+        buttons[0][0] = id00;
+        buttons[0][1] = id01;
+        buttons[0][2] = id02;
+        buttons[1][0] = id10;
+        buttons[1][1] = id11;
+        buttons[1][2] = id12;
+        buttons[2][0] = id20;
+        buttons[2][1] = id21;
+        buttons[2][2] = id22;
+    }
+
     @Override
     public void update(int row, int col, Piece piece) {
-        String buttonId = "id" + row + col;
-        for (Node node : gameGrid.getChildren()) {
-            if (node instanceof Button button && buttonId.equals(node.getId())) {
-                if (piece == Piece.X) {
-                    button.setText("X");
-                } else if (piece == Piece.O) {
-                    button.setText("O");
-                } else {
-                    button.setText("");
-                }
-                break;
-            }
+        Button button = buttons[row][col];
+
+        if (piece == Piece.X) {
+            button.setText("X");
+        } else if (piece == Piece.O) {
+            button.setText("O");
+        } else {
+            button.setText("");
         }
     }
 

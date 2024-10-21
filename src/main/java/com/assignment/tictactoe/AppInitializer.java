@@ -18,7 +18,7 @@ public class AppInitializer extends Application {
         stage.getIcons().add(image);
         stage.setResizable(false);
         stage.setScene(scene);
-        stage.show();
+        stage.show(); 
     }
 
     public static void main(String[] args) {
