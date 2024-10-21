@@ -1,4 +1,4 @@
-package lk.ijse.gdse71.tictactoe;
+package com.assignment.tictactoe;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

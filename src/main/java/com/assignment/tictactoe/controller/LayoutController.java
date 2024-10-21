@@ -1,4 +1,4 @@
-package lk.ijse.gdse71.tictactoe.controller;
+package com.assignment.tictactoe.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
