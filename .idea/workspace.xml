@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="839a129d-6ed3-4ad8-a730-92866b8016d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/assignment/tictactoe/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assignment/tictactoe/AppInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/assignment/tictactoe/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/assignment/tictactoe/controller/BoardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <updated>1729523547247</updated>
       <workItem from="1729523548160" duration="1316000" />
       <workItem from="1729524893298" duration="3923000" />
-      <workItem from="1729529419401" duration="1361000" />
+      <workItem from="1729529419401" duration="4010000" />
     </task>
     <servers />
   </component>
