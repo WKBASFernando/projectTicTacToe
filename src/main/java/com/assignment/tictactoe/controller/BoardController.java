@@ -58,19 +58,38 @@ public class BoardController implements BoardUI {
 
     @FXML
     void buttonClicked(ActionEvent event) {
-        Button button = (Button) event.getSource();
-        int row = Integer.parseInt(button.getId().split("")[2]);
-        int col = Integer.parseInt(button.getId().split("")[3]);
+        Button button = (Button) event.getSource();   // Grt the clicked button
+        int row = Integer.parseInt(button.getId().substring(2, 3));   // Get the row index
+        int col = Integer.parseInt(button.getId().substring(3, 4));   // Get the column index
 
-        human.move(row, col);
-        ai.findBestMove();
-        board.printBoard();
-        resetBoard();
-        if (board.checkWinner() != null) {
-            NotifyWinner(board.checkWinner().getWinningPiece());
-        } else if (board.isBoardFull()) {
-            displayMessage("Match Drawn!!!");
+        if (board.isLegalMove(row, col)) {  // Check if the move is legal
+            // Human player makes a move
+            human.move(row, col);
+            resetBoard();  // Update the UI with the new move
+
+            // Check if the human player has won or if the board is full
+            if (board.checkWinner() != null) {
+                NotifyWinner(board.checkWinner().getWinningPiece());
+                return;
+            } else if (board.isBoardFull()) {
+                displayMessage("Match Drawn!!!");
+                return;
+            }
+
+            // Allow the AI to make a move only if the human’s move was valid
+            ai.findBestMove();
+            resetBoard();
+
+            // Check if the AI has won or if the board is full after the AI’s move
+            if (board.checkWinner() != null) {
+                NotifyWinner(board.checkWinner().getWinningPiece());
+            } else if (board.isBoardFull()) {
+                displayMessage("Match Drawn!!!");
+            }
+        } else {
+            displayMessage("Invalid move! Try again.");    // Display a message if the cell is already occupied.
         }
+
     }
 
     public void resetBoard() {
@@ -81,7 +100,7 @@ public class BoardController implements BoardUI {
         }
     }
 
-    public void initialize() {
+    public void initialize() {   // Initialize button references to Array
         buttons[0][0] = id00;
         buttons[0][1] = id01;
         buttons[0][2] = id02;
